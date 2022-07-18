@@ -1,0 +1,58 @@
+.icon{
+    font-size: 40px;
+    font-weight: bolder;
+    border-radius: 50%;
+
+}
+.socialIcon{
+    font-size: 25px;
+    font-weight: bolder;
+    border-radius: 50%;
+    color: black;
+   
+}
+.nav{
+    list-style: none;
+    position: fixed;
+    transform: translate(-50%,-50%);
+    bottom: 15%;
+    left: 50%;
+}
+ .nav li{
+position: absolute;
+top:0%;
+left:0%;
+transform: translate(-50%,-50%);
+text-align: center;
+
+ }
+
+.nav  li a{
+     width: 50px;
+height: 45px;
+    background-color:#A26BFC;
+text-align: center;
+display: block;
+border-radius: 30%;
+justify-content: center;
+   align-items: center;  
+   padding-top: 5px;
+}
+.socials{
+    padding: 0%;
+    list-style: none;
+    position: fixed;
+    transform: translate(-50%,-50%);
+    top: 3%;
+    right:0%;
+    display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+
+}
+.socials li{
+margin-right: 3px;
+    display: block;
+   
+     }
