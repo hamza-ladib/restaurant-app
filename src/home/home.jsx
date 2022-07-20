@@ -7,6 +7,7 @@ import salad from "../assets/salad.png"
 import nuggets from '../assets/nuggets.png'
 import Navbar from '../elements/navbar';
 
+
 export default function Home() {
     let text1 =["fik jou3 ?","matsnaach .. !","commander db "];
 const textAnimation = {start:{x:800},animate:{x:0,transition:{delay :1.5,duration: 1, type: "spring", stiffness: 300}}};
