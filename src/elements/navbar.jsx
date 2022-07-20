@@ -20,8 +20,8 @@ export default function NavBar() {
 const [seeNav, hideNav] =useState(false);
 const socialsAnimationHover = { hover: { scale: 1.3 } ,start:{y:-100},animate:{y:0,transition:{delay :0.5,duration: 2, type: "spring", stiffness: 300}}};
   return (
-    <div>
-<ul className='socials'> 
+  <div className='navbar'>
+      <ul className='socials'> 
   <motion.li
    variants={socialsAnimationHover}
   animate="animate"
@@ -46,21 +46,25 @@ const socialsAnimationHover = { hover: { scale: 1.3 } ,start:{y:-100},animate:{y
         <motion.ul  className='nav'     initial={{ y: -600 }} animate={{ y:0 }}  transition={{ duration: 1, type: "spring", stiffness: 300}}>
           
 { seeNav && <motion.li 
+          whileHover={{scale :1.1}}
           animate={{ y:-80 ,x:-22}}  
           transition={{ duration: 1, type: "spring", stiffness: 300}}
           ><a><CgBoy className='icon'/></a></motion.li>}
 { seeNav && <motion.li 
+          whileHover={{scale :1.1}}
           animate={{ y:-22, x:30}}  
           transition={{ duration: 1, type: "spring", stiffness: 300}}
           ><a><AiOutlinePhone className='icon'/></a></motion.li>}
 { seeNav && <motion.li 
+          whileHover={{scale :1.1}}
           animate={{ y:-22, x:-80}}  
           transition={{ duration: 1, type: "spring", stiffness: 300}}
           >  <a><BiBookOpen className='icon' /></a></motion.li>}
 { seeNav && <motion.li 
+          whileHover={{scale :1.1}}
           animate={{ y:30, x:-22}}  
           transition={{ duration: 1, type: "spring", stiffness: 300}}
-          ><a href='www.google.com'><MdHome className='icon'/></a></motion.li>}
+          ><a><MdHome className='icon'/></a></motion.li>}
           <li  onClick={()=>hideNav(!seeNav)}><a><BiDialpad className='icon'/></a></li>
         </motion.ul>
     </div>
