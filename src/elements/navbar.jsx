@@ -46,7 +46,11 @@ return (
 </ul>
 
 
-        <motion.ul  className='nav'     initial={{ y: -600 }} animate={{ y:0 }}  transition={{ duration: 1, type: "spring", stiffness: 300}}>
+ <motion.ul  className='nav'  
+  
+ 
+  drag
+ initial={{ y: -600 }} animate={{ y:0 }}  transition={{ duration: 1, type: "spring", stiffness: 300}}>
           
 { seeNav && <motion.li onClick={ ()=>{
   if(seeNav)
@@ -66,11 +70,19 @@ return (
           animate={{ y:-22, x:-80}}  
           transition={{ duration: 1, type: "spring", stiffness: 300}}
           >  <a><BiBookOpen className='icon' /></a></motion.li>}
-{ seeNav && <motion.li 
+{ seeNav && <motion.li    
+
+onClick={ ()=>{
+  if(seeNav)
+  navigate('/') 
+}}
           whileHover={{scale :1.1}}
           animate={{ y:30, x:-22}}  
+         
           transition={{ duration: 1, type: "spring", stiffness: 300}}
           ><a><MdHome className='icon'/></a></motion.li>}
+
+
           <li  onClick={()=>hideNav(!seeNav)}><a><BiDialpad className='icon'/></a></li>
         </motion.ul>
     </div>

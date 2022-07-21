@@ -26,7 +26,7 @@ const images =[burger , salad,chicken,nuggets];
 }, []);
   return (
     <div className='home'>
-       <Navbar />
+       
     <div className='text'>
        {text1.map((txt)=>
      <motion.p
@@ -36,12 +36,14 @@ const images =[burger , salad,chicken,nuggets];
      >{txt}</motion.p>
         )}
         </div>
+        <div className='imghold' >
     <motion.img 
      variants={imageAnimation}
      animate="animate"
      initial="start"
-    
-    src={images[currentImage%4]} className='img'/>
+    src={images[currentImage%4]} className='img'></motion.img>
+    </div>
+    <Navbar />
     </div>
   )
 }
