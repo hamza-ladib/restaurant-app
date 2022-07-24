@@ -21,10 +21,13 @@ box-sizing: border-box;
         #A26BFC 58.86%,
         #4e3399 99.4%
       );
+      background-color: #fba8a4;
+      background-image: linear-gradient(315deg, #fba8a4 0%, #dad2f3 74%);
+
       overflow: hidden;
 
  }
- .container{
+ .container1{
     position:absolute;
     top: 50%;
     width:95%;

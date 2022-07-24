@@ -5,9 +5,10 @@ import { useState } from "react";
 import { MdHome } from "react-icons/md";
 import { motion } from "framer-motion"
 import {CgBoy } from "react-icons/cg";
-import {AiOutlinePhone } from "react-icons/ai";
+
 import {BiBookOpen } from "react-icons/bi";
 import {BiDialpad} from "react-icons/bi";
+import {AiOutlinePhone } from "react-icons/ai";
 
 
 // social icons 
@@ -61,11 +62,22 @@ return (
           transition={{ duration: 1, type: "spring", stiffness: 300}}
           ><a ><CgBoy   className='icon'/></a></motion.li>}
 { seeNav && <motion.li 
+
+onClick={ ()=>{
+  if(seeNav)
+  navigate('/contact') 
+}}
+
           whileHover={{scale :1.1}}
           animate={{ y:-22, x:30}}  
           transition={{ duration: 1, type: "spring", stiffness: 300}}
           ><a><AiOutlinePhone className='icon'/></a></motion.li>}
 { seeNav && <motion.li 
+
+onClick={ ()=>{
+  if(seeNav)
+  navigate('/menu') 
+}}
           whileHover={{scale :1.1}}
           animate={{ y:-22, x:-80}}  
           transition={{ duration: 1, type: "spring", stiffness: 300}}

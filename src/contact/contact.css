@@ -1,0 +1,117 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    }
+    .icon{
+    color: white;
+    font-size: 40px;
+    padding: auto;
+    }
+    .contact{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color:#A26BFC;
+
+
+     
+        /*background: linear-gradient(
+            180.69deg,
+            #4e3399 10.95%,
+            #A26BFC 58.86%,
+            hsl(256, 50%, 40%) 99.4%
+          );
+          */
+
+          background-color: #fba8a4;
+          background-image: linear-gradient(315deg, #fba8a4 0%, #dad2f3 74%);
+
+
+        
+          overflow: hidden;
+    
+     }
+     .container{
+        position:absolute;
+        top: 50%;
+        width:95%;
+        left: 50%;
+        height:70%;
+        display: grid; 
+    
+  grid-template-columns: 1fr; 
+  grid-template-rows:2fr 1fr 1fr 4fr 1fr; 
+  gap: 9px 0px; 
+  grid-template-areas: 
+    "."
+    "."
+    "."
+    "."
+    ".";
+        transform: translate(-50%,-50%);
+         background: rgba(255,255,255,0.4);
+          border-radius: 15px;
+          border: 1px solid rgba(255,255,255,0.2);
+          backdrop-filter: blur(5px);
+          -webkit-backdrop-filter: blur(5px);
+     }
+     .container div{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+       
+     } 
+     .container div input, .container div textArea,.container div button{
+        width: 50%;
+       height: 35px;
+        align-content: center;
+        border: none;
+        outline: none;
+        border-bottom: 1px solid white;
+        background-color: inherit;
+        font-size: 15px;
+        font-family: 'Kanit', sans-serif;
+                 color: black;
+
+     }
+     .container .userText textarea  {
+      border: none;
+         height: 100%;
+        outline: none;
+        padding: 2px;
+        background-color: inherit;
+        border: 0.5px solid white;
+        }
+        .container .userSubmit{
+         display: flex;
+         justify-content: center;
+         align-items: center;
+   
+        }
+        .container .userSubmit .icon{
+         transform: translateX(100%);
+      
+
+
+        }
+
+        .container .userSubmit button{
+         width: 25%;
+         background-color: tomato;
+         border: none;
+         border-radius: 5%;
+
+
+        }
+        .userRate{
+         word-spacing: 20px;
+         font-size: 100px;
+
+        }
+        .userRate div{
+         width: 10%;
+         text-align: left;        }

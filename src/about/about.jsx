@@ -1,8 +1,8 @@
-import React from 'react'
-import './about.css'
+import React from 'react';
+import './about.css';
 import restaurant  from '../assets/restaurant1.jpg'
 import { useState} from 'react'
-import { motion, useMotionValue } from "framer-motion"
+import { motion} from "framer-motion"
 import Navbar from '../elements/navbar';
 
 export default function About() {
@@ -15,7 +15,7 @@ export default function About() {
 
     }}  >
 
-      <div className='container'>
+      <div className='container1'>
       <motion.img className='img' src={restaurant}
       style={{x:imgEffectX, y:imgEffectY}}
       key={[imgEffectX,imgEffectY]}
@@ -36,7 +36,7 @@ export default function About() {
     ><span className='textosp' >Our  </span>  restaurant is <span className='textosp'>Unique</span></motion.div>
 
 <motion.div  className='texto'
-        initial={{y:500}}
+        initial={{y:500}} 
           animate={{y:0}}  
           transition={{ delay:2, duration: 1, type: "spring", stiffness: 300}}
     ><span className='textosp'>Our  </span>  proriety is your  <span className='textosp'>Comfort</span></motion.div>
