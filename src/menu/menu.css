@@ -1,9 +1,140 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+
+
+
+
 .menu{
-    margin-top: 20px;
+display: block;
+
+
+
+}
+.foods{
+    
+    width: 100%;
+    height: 90%;
+    margin-top: 30px;
     margin-left: 20px;
     display: grid;
     grid-template-columns: 4fr 4fr 4fr ;
     grid-area:"." "." ".";
-    gap: 20px;
+    gap: 15px;
+
+}
+.selectedList{
+    width: 300px;
+    height: 430px;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%,50%);
+/*background-color: red;*/
+display: block;
+padding: auto;
+z-index: 300;
+
+font-family: 'Josefin Sans', sans-serif;
+font-size: 20px;
+
+
+}
+.showingPart{
+ 
+    display: flex;
+    justify-content: center;
+}
+.showingPart{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    left: 50%;
+    top: 10%;
+    transform: translate(-50%,-50%);
+    background-color:#A26BFC;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+.showingPart .p{
+    position: relative;
+    
+    width: 40px;
+    height:40px;
+    left: 110%;
+    top: -95%;
+    transform: translate(-50%,-50%);
+    font-size: 20px; 
+    background-color:#A26BFC;
+    text-align: center;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.hiddenPart{
+    background-color:#A26BFC;
+    height: 80%;
+   /*height: 0%;*/
+    display: block;
+    align-items: center;
+    align-content: center;
+    border-radius: 25px;
+    padding: 10px;
+   
+    
+}
+.allSelected{
+    height: 85%;
+    overflow-y: scroll;
+}
+.allSelected::-webkit-scrollbar {
+    display: none;
+  }
+.selectedItem{
+
+    display: flex;justify-content: space-evenly;
+    
+    background-color: #A26BFC;
+    padding: 10px;
+    border-bottom: 1px solid black;
+  
+
+}
+.selectedItem button{
+padding: 10px;    border: none;
+ border-radius: 10px;
+ background-color: #f6d327;
+background-image: linear-gradient(315deg, #f6d327 0%, #de4daa 74%);
+font-family: 'Josefin Sans', sans-serif;
+}
+.total{
+    position: relative;
+    text-align: center;
+    width: 100%;
+    height: 20px;
+    left: 50%;
+    top: 4%;
+    padding: 5px;
+    transform: translate(-50%,-50%);
+    border-radius: 20px; border-radius: 10px;
+   font-family: 'Josefin Sans', sans-serif;
+    font-size: 20px; 
+
+}
+.commander{
+    padding: 10px;    border: none;
+ border-radius: 10px;
+ background-color: #f6d327;
+background-image: linear-gradient(315deg, #f6d327 0%, #de4daa 74%);
+font-family: 'Josefin Sans', sans-serif;
+position: relative;
+    text-align: center;
+    width: 50%;
+    left: 50%;
+    top: 10%;
+    transform: translate(-50%,-50%);
 
 }

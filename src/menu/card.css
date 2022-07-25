@@ -42,12 +42,11 @@ left: 0%;
     font-weight: lighter;
     color: white;
 font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;}
-.item-card button{
+.item-card button {
     width: 200px;
     height: 40px;
     position: relative;
-    background-color :#861657;
-background-image: linear-gradient(326deg, #861657 0%, #ffa69e 74%);
+
     transform: translate(-50%,-50%); 
     background-color: #ffac81;
 background-image :linear-gradient(315deg, #ffac81 0%, #ff928b 74%);
@@ -56,6 +55,8 @@ background-image :linear-gradient(315deg, #ffac81 0%, #ff928b 74%);
     border: none;
     opacity: 0.8;
     border-radius: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
 }
 .item-list{
     position:relative;
@@ -63,6 +64,92 @@ background-image :linear-gradient(315deg, #ffac81 0%, #ff928b 74%);
    height: 100%;
 top: 0%;
 left: 0%;
-    background-color: red;
+    background-color: black;
+    border-radius: 20px;
+
+
+}
+
+.item-list .listItem{
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: proximity;
+    width: 100%;
+    padding-top: 30px;
+    height: 80%;
+    padding-left:  20px;
+    padding-right:  20px;
+    
+}
+.listItem::-webkit-scrollbar {
+    display: none;
+  }
+
+
+.item-list .listItem div{ 
+    position: relative;
+    transform: translate(-50%,-50%); 
+    left: 50%;
+    z-index: 300;
+  
+    text-align: center;
+    font-size: 25px;
+    font-weight: bolder;
+    color: white;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+display: flex;
+justify-content:space-between;
+}
+.item-list button{
+    width: 300px;
+    height: 40px;
+    position: relative;
+    transform: translate(-50%,-50%); 
+    background-color: #ffac81;
+background-image :linear-gradient(315deg, #ffac81 0%, #ff928b 74%);
+    left: 50%;
+    top: 10%;
+    border: none;
+    opacity: 0.8;
+    border-radius: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+
+
+
+
+
+
+
+
+.item-list div input{
+    width: 30px;
+    height: 30px;
+    background-color: green;
+    color: #861657;
     border-radius: 20px;
 }
+input[type="checkbox"]:checked:after{
+    position: relative;
+    display: block;
+    width: 30px;
+    height: 30px;
+    top: -47%;
+    content: "";
+    background:white;
+  }
+  input[type="checkbox"]:checked:before{
+    position: relative;
+
+    top: 50%;
+    left: 50%;
+    z-index: 100;
+    transform: translate(-50%,-50%);
+    display: block;
+    width: 15px;
+    height: 15px;
+    border-radius: 2px;
+    content: "";
+    background: #FBC02D;
+  }

@@ -19,13 +19,17 @@ import {AiFillGooglePlusSquare} from "react-icons/ai";
 import { useNavigate } from 'react-router-dom';
 
 
-export default function NavBar() {
+export default function NavBar(props) {
 const [seeNav, hideNav] =useState(false);
+const [hovered,notHovered]=useState(false);
 const socialsAnimationHover = { hover: { scale: 1.3 } ,start:{y:-100},animate:{y:0,transition:{delay :0.5,duration: 2, type: "spring", stiffness: 300}}};
   let navigate=useNavigate();
 return (
-  <div className='navbar'>
-      <ul className='socials'> 
+  <motion.div className='navbar'
+  
+  
+  >
+      <motion.ul className='socials' animate={{display:props.showContact?"none":"flex"}}> 
   <motion.li
    variants={socialsAnimationHover}
   animate="animate"
@@ -44,14 +48,18 @@ return (
   initial="start"
   whileHover="hover"
   ><a href='www.gmail.com'><AiFillGooglePlusSquare  className='socialIcon'/></a></motion.li>
-</ul>
+</motion.ul>
 
 
- <motion.ul  className='nav'  
+ <motion.ul  
+ className='nav'  
   
- 
+ layout
+  onHoverStart={()=>{notHovered(true)}}
+  onHoverEnd={()=>{notHovered(false)}}
   drag
- initial={{ y: -600 }} animate={{ y:0 }}  transition={{ duration: 1, type: "spring", stiffness: 300}}>
+ initial={{ y: -600}} 
+ animate={{opacity:hovered?1:0.4, y:0, transition:{duration: 1, type: "spring", stiffness: 300}}}>
           
 { seeNav && <motion.li onClick={ ()=>{
   if(seeNav)
@@ -97,6 +105,6 @@ onClick={ ()=>{
 
           <li  onClick={()=>hideNav(!seeNav)}><a><BiDialpad className='icon'/></a></li>
         </motion.ul>
-    </div>
+    </motion.div>
   )
 }
